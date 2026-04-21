@@ -1,0 +1,54 @@
+body{
+font-family: Arial;
+margin:0;
+background: lightblue;
+text-align:center;
+}
+
+
+nav{
+background:white;
+padding:20px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+margin:10px;
+text-decoration:none;
+color:teal;
+font-weight:bold;
+}
+
+
+.hero{
+padding:60px;
+}
+
+
+section{
+padding:40px;
+}
+
+
+.menu{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+width:200px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+footer{
+background:white;
+padding:20px;
+margin-top:40px;
+}
