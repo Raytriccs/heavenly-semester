@@ -1,54 +1,74 @@
-body{
-font-family: Arial;
-margin:0;
-background: lightblue;
-text-align:center;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, lightblue, #dff6ff);
+    text-align: center;
+    color: #123;
 }
 
-
-nav{
-background:white;
-padding:20px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+nav {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-nav a{
-margin:10px;
-text-decoration:none;
-color:teal;
-font-weight:bold;
+nav h1 {
+    margin: 0 0 10px 0;
+    color: teal;
 }
 
-
-.hero{
-padding:60px;
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: teal;
+    font-weight: bold;
 }
 
-
-section{
-padding:40px;
+.hero {
+    padding: 70px 20px;
 }
 
-
-.menu{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-width:200px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+.hero p {
+    font-size: 18px;
 }
 
+section {
+    padding: 40px 20px;
+}
 
-footer{
-background:white;
-padding:20px;
-margin-top:40px;
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: teal;
+}
+
+.info-text {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+footer {
+    background: white;
+    padding: 20px;
+    margin-top: 40px;
 }
