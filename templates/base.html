@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Heavenly{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Heavenly</h1>
+
+        <div class="nav-links">
+            <a href="#home">Hjem</a>
+            <a href="#menu">Meny</a>
+            <a href="#orders">Bestillinger</a>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>Heavenly Strømmen</p>
+    </footer>
+
+</body>
+</html>

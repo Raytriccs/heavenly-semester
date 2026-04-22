@@ -1,78 +1,49 @@
-<!DOCTYPE html>
-<html lang="no">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heavenly</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
+{% block title %}Heavenly{% endblock %}
 
-<body>
-
-    <nav>
-        <h1>Heavenly</h1>
-
-        <div class="nav-links">
-            <a href="#menu">Meny</a>
-            <a href="#about">Om oss</a>
-            <a href="#visit">Besøk</a>
-        </div>
-    </nav>
-
-<section class="hero">
+{% block content %}
+<section id="home" class="hero">
     <img src="/static/HEAVENLY LOGO.jpg" alt="Heavenly logo" class="hero-logo">
-
-    <h2>Heavenly</h2>
-    <p>Dessert & Sweet Lounge i Strømmen</p>
+    <h2>Heavenly Dessert Lounge</h2>
+    <p>Velkommen til Strømmen sin søteste opplevelse</p>
 </section>
 
+<section id="menu">
+    <h2>Meny</h2>
 
-    <section id="menu">
-        <h2>Meny</h2>
-
-        <div class="menu">
-            <div class="card">
-                <h3>Mini Pancakes</h3>
-                <p>Chocolate Strawberry</p>
-            </div>
-
-            <div class="card">
-                <h3>Waffles</h3>
-                <p>Lotus Biscoff</p>
-            </div>
-
-            <div class="card">
-                <h3>Milkshakes</h3>
-                <p>Chocolate</p>
-            </div>
-
-            <div class="card">
-                <h3>Mocktails</h3>
-                <p>Blue Lagoon</p>
-            </div>
+    <div class="menu">
+        <div class="card">
+            <h3>Mini Pancakes</h3>
+            <p>Chocolate Strawberry</p>
         </div>
-    </section>
 
-    <section id="about">
-        <h2>Om oss</h2>
+        <div class="card">
+            <h3>Waffles</h3>
+            <p>Lotus Biscoff</p>
+        </div>
 
-        <p class="info-text">
-            Heavenly er et dessertsted hvor du kan nyte pancakes,
-            vafler og milkshakes.
-        </p>
-    </section>
+        <div class="card">
+            <h3>Milkshakes</h3>
+            <p>Chocolate</p>
+        </div>
 
-    <section id="visit">
-        <h2>Besøk oss</h2>
+        <div class="card">
+            <h3>Mocktails</h3>
+            <p>Blue Lagoon</p>
+        </div>
+    </div>
+</section>
 
-        <p>Strømsveien 62</p>
-        <p>2010 Strømmen</p>
-    </section>
+<section id="orders">
+    <h2>Bestillinger</h2>
 
-    <footer>
-        <p>Heavenly Strømmen</p>
-    </footer>
+    <div class="order-box">
+        <p>Mini Pancakes - klar til servering</p>
+    </div>
 
-</body>
-</html>
+    <div class="order-box">
+        <p>Milkshake - under laging</p>
+    </div>
+</section>
+{% endblock %}
