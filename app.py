@@ -1,9 +1,31 @@
 from flask import Flask, render_template
+import mysql.connector
 
 app = Flask(__name__)
 
+
+def get_conn():
+    return mysql.connector.connect(
+        host="localhost",
+        user="rayaanyasar",
+        password="Rayaan2007!",
+        database="heavenly"
+    )
+
+
 @app.route("/")
 def home():
-    return render_template("index.html")
+    conn = get_conn()
+    cur = conn.cursor()
 
-app.run(debug=True)
+    cur.execute("SELECT * FROM menu_items")
+    menu_items = cur.fetchall()
+
+    cur.close()
+    conn.close()
+
+    return render_template("index.html", menu_items=menu_items)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
