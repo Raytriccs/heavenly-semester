@@ -15,12 +15,18 @@ def get_conn():
 
 @app.route("/")
 def home():
+
     conn = get_conn()
     cur = conn.cursor()
-    
+
+    cur.execute("SELECT * FROM menu_items")
+    menu_items = cur.fetchall()
+
+    cur.close()
+    conn.close()
 
     return render_template("index.html", menu_items=menu_items)
-
-
-if __name__ == "__main__":
+    
+    if __name__ == "__main__":
     app.run(debug=True)
+
