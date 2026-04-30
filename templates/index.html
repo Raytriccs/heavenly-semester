@@ -18,26 +18,29 @@
         {% for item in menu_items %}
         {% if item[2] == "Milkshakes" %}
         <div class="card">
-            {% if item[1] == "Sjokolade Milkshake" %}
-            <img src="/static/sjokoladeM.jpeg" alt="Sjokolade Milkshake" class="menu-image">
-            {% elif item[1] == "Vanilje Milkshake" %}
-            <img src="/static/vaniljeM.jpeg" alt="Vanilje Milkshake" class="menu-image">
-            {% elif item[1] == "Jordbær Milkshake" %}
-            <img src="/static/JordbærM.jpeg" alt="Jordbær Milkshake" class="menu-image">
-            {% elif item[1] == "Pistasj Milkshake" %}
-            <img src="/static/pistasjM.jpeg" alt="Pistasj Milkshake" class="menu-image">
-            {% elif item[1] == "Brownie Milkshake" %}
-            <img src="/static/BrownieM.jpeg" alt="Brownie Milkshake" class="menu-image">
-            {% elif item[1] == "Cookie Dough Milkshake" %}
-            <img src="/static/cookiedoughM.jpeg" alt="Cookie Dough Milkshake" class="menu-image">
-            {% elif item[1] == "Salt Karamell Milkshake" %}
-            <img src="/static/SaltM.jpeg" alt="Salt Karamell Milkshake" class="menu-image">
-            {% elif item[1] == "Lotus Biscoff Milkshake" %}
-            <img src="/static/lotusM.jpeg" alt="Lotus Biscoff Milkshake" class="menu-image">
-            {% endif %}
+            <div class="image-wrapper">
+                {% if item[1] == "Sjokolade Milkshake" %}
+                <img src="/static/sjokoladeM.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Vanilje Milkshake" %}
+                <img src="/static/vaniljeM.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Jordbær Milkshake" %}
+                <img src="/static/JordbærM.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Pistasj Milkshake" %}
+                <img src="/static/pistasjM.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Brownie Milkshake" %}
+                <img src="/static/BrownieM.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Cookie Dough Milkshake" %}
+                <img src="/static/cookiedoughM.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Salt Karamell Milkshake" %}
+                <img src="/static/SaltM.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Lotus Biscoff Milkshake" %}
+                <img src="/static/lotusM.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% endif %}
+
+                <button class="add-btn" onclick="addToCart('{{ item[1] }}', {{ item[3] }})">+</button>
+            </div>
 
             <h3>{{ item[1] }}</h3>
-            <p>{{ item[2] }}</p>
             <p>{{ item[3] }} kr</p>
         </div>
         {% endif %}
@@ -49,24 +52,27 @@
         {% for item in menu_items %}
         {% if item[2] == "Waffles" %}
         <div class="card">
-            {% if item[1] == "The Waffle Icon" %}
-            <img src="/static/The waffle.jpeg" alt="The Waffle Icon" class="menu-image">
-            {% elif item[1] == "Waffle Besties" %}
-            <img src="/static/WaffleB.jpeg" alt="Waffle Besties" class="menu-image">
-            {% elif item[1] == "Caramel Dream" %}
-            <img src="/static/Caramel.jpeg" alt="Caramel Dream" class="menu-image">
-            {% elif item[1] == "Lotus Biscoff Waffle" %}
-            <img src="/static/LotusB.jpeg" alt="Lotus Biscoff Waffle" class="menu-image">
-            {% elif item[1] == "Strawberry Joy" %}
-            <img src="/static/StrawberryJ.jpeg" alt="Strawberry Joy" class="menu-image">
-            {% elif item[1] == "Cookie Heaven" %}
-            <img src="/static/CookieH.jpeg" alt="Cookie Heaven" class="menu-image">
-            {% elif item[1] == "Fruit Bomb" %}
-            <img src="/static/FruitB.jpeg" alt="Fruit Bomb" class="menu-image">
-            {% endif %}
+            <div class="image-wrapper">
+                {% if item[1] == "The Waffle Icon" %}
+                <img src="/static/The waffle.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Waffle Besties" %}
+                <img src="/static/WaffleB.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Caramel Dream" %}
+                <img src="/static/Caramel.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Lotus Biscoff Waffle" %}
+                <img src="/static/LotusB.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Strawberry Joy" %}
+                <img src="/static/StrawberryJ.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Cookie Heaven" %}
+                <img src="/static/CookieH.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Fruit Bomb" %}
+                <img src="/static/FruitB.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% endif %}
+
+                <button class="add-btn" onclick="addToCart('{{ item[1] }}', {{ item[3] }})">+</button>
+            </div>
 
             <h3>{{ item[1] }}</h3>
-            <p>{{ item[2] }}</p>
             <p>{{ item[3] }} kr</p>
         </div>
         {% endif %}
@@ -78,14 +84,17 @@
         {% for item in menu_items %}
         {% if item[2] == "Mini Pancakes" %}
         <div class="card">
-            {% if item[1] == "Berrylicious" %}
-            <img src="/static/BerryL.jpeg" alt="Berrylicious" class="menu-image">
-            {% elif item[1] == "Choco Strawberry" %}
-            <img src="/static/Choco.jpeg" alt="Choco Strawberry" class="menu-image">
-            {% endif %}
+            <div class="image-wrapper">
+                {% if item[1] == "Berrylicious" %}
+                <img src="/static/BerryL.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% elif item[1] == "Choco Strawberry" %}
+                <img src="/static/Choco.jpeg" alt="{{ item[1] }}" class="menu-image">
+                {% endif %}
+
+                <button class="add-btn" onclick="addToCart('{{ item[1] }}', {{ item[3] }})">+</button>
+            </div>
 
             <h3>{{ item[1] }}</h3>
-            <p>{{ item[2] }}</p>
             <p>{{ item[3] }} kr</p>
         </div>
         {% endif %}
@@ -96,13 +105,13 @@
 <section id="orders">
     <h2>Bestillinger</h2>
 
+    {% for order in orders %}
     <div class="order-box">
-        <p>Mini Pancakes - klar til servering</p>
+        <p>{{ order[1] }}</p>
+        <small>{{ order[2] }}</small>
     </div>
-
-    <div class="order-box">
-        <p>Milkshake - under laging</p>
-    </div>
+    {% endfor %}
 </section>
+
 
 {% endblock %}

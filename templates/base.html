@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Heavenly{% endblock %}</title>
-   <link rel="stylesheet" href="/static/style.css?v=2">
-
+    <link rel="stylesheet" href="/static/style.css?v=5">
 </head>
 <body>
 
-    <nav> 
-        <h1>Heavenly</h1>
+    <nav>
+        <div class="nav-left">
+            <h1>Heavenly</h1>
 
-        <div class="nav-links">
-            <a href="#home">Hjem</a>
-            <a href="#menu">Meny</a>
-            <a href="#orders">Bestillinger</a>
+            <div class="nav-links">
+                <a href="#home">Hjem</a>
+                <a href="#menu">Meny</a>
+                <a href="#orders">Bestillinger</a>
+            </div>
+        </div>
+
+        <div class="cart-wrapper">
+            <div class="cart-box" onclick="toggleCart()">
+                <span id="cart-count">0 varer</span>
+                <span id="cart-total">0 kr</span>
+            </div>
+
+            <div id="cart-dropdown" class="cart-dropdown">
+                <h4>Handlekurv</h4>
+                <div id="cart-items">
+                    <p>Handlekurven er tom</p>
+                </div>
+                <button class="checkout-btn" onclick="placeOrder()">Bestill</button>
+            </div>
         </div>
     </nav>
 
@@ -25,5 +41,6 @@
         <p>Heavenly Strømmen</p>
     </footer>
 
+    <script src="/static/script.js?v=2"></script>
 </body>
 </html>
