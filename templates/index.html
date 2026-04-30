@@ -13,13 +13,82 @@
 <section id="menu">
     <h2>Meny</h2>
 
+    <h3 class="menu-category-title">Milkshakes</h3>
     <div class="menu">
         {% for item in menu_items %}
+        {% if item[2] == "Milkshakes" %}
         <div class="card">
+            {% if item[1] == "Sjokolade Milkshake" %}
+            <img src="/static/sjokoladeM.jpeg" alt="Sjokolade Milkshake" class="menu-image">
+            {% elif item[1] == "Vanilje Milkshake" %}
+            <img src="/static/vaniljeM.jpeg" alt="Vanilje Milkshake" class="menu-image">
+            {% elif item[1] == "Jordbær Milkshake" %}
+            <img src="/static/JordbærM.jpeg" alt="Jordbær Milkshake" class="menu-image">
+            {% elif item[1] == "Pistasj Milkshake" %}
+            <img src="/static/pistasjM.jpeg" alt="Pistasj Milkshake" class="menu-image">
+            {% elif item[1] == "Brownie Milkshake" %}
+            <img src="/static/BrownieM.jpeg" alt="Brownie Milkshake" class="menu-image">
+            {% elif item[1] == "Cookie Dough Milkshake" %}
+            <img src="/static/cookiedoughM.jpeg" alt="Cookie Dough Milkshake" class="menu-image">
+            {% elif item[1] == "Salt Karamell Milkshake" %}
+            <img src="/static/SaltM.jpeg" alt="Salt Karamell Milkshake" class="menu-image">
+            {% elif item[1] == "Lotus Biscoff Milkshake" %}
+            <img src="/static/lotusM.jpeg" alt="Lotus Biscoff Milkshake" class="menu-image">
+            {% endif %}
+
             <h3>{{ item[1] }}</h3>
             <p>{{ item[2] }}</p>
             <p>{{ item[3] }} kr</p>
         </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h3 class="menu-category-title">Waffles</h3>
+    <div class="menu">
+        {% for item in menu_items %}
+        {% if item[2] == "Waffles" %}
+        <div class="card">
+            {% if item[1] == "The Waffle Icon" %}
+            <img src="/static/The waffle.jpeg" alt="The Waffle Icon" class="menu-image">
+            {% elif item[1] == "Waffle Besties" %}
+            <img src="/static/WaffleB.jpeg" alt="Waffle Besties" class="menu-image">
+            {% elif item[1] == "Caramel Dream" %}
+            <img src="/static/Caramel.jpeg" alt="Caramel Dream" class="menu-image">
+            {% elif item[1] == "Lotus Biscoff Waffle" %}
+            <img src="/static/LotusB.jpeg" alt="Lotus Biscoff Waffle" class="menu-image">
+            {% elif item[1] == "Strawberry Joy" %}
+            <img src="/static/StrawberryJ.jpeg" alt="Strawberry Joy" class="menu-image">
+            {% elif item[1] == "Cookie Heaven" %}
+            <img src="/static/CookieH.jpeg" alt="Cookie Heaven" class="menu-image">
+            {% elif item[1] == "Fruit Bomb" %}
+            <img src="/static/FruitB.jpeg" alt="Fruit Bomb" class="menu-image">
+            {% endif %}
+
+            <h3>{{ item[1] }}</h3>
+            <p>{{ item[2] }}</p>
+            <p>{{ item[3] }} kr</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h3 class="menu-category-title">Mini Pancakes</h3>
+    <div class="menu">
+        {% for item in menu_items %}
+        {% if item[2] == "Mini Pancakes" %}
+        <div class="card">
+            {% if item[1] == "Berrylicious" %}
+            <img src="/static/BerryL.jpeg" alt="Berrylicious" class="menu-image">
+            {% elif item[1] == "Choco Strawberry" %}
+            <img src="/static/Choco.jpeg" alt="Choco Strawberry" class="menu-image">
+            {% endif %}
+
+            <h3>{{ item[1] }}</h3>
+            <p>{{ item[2] }}</p>
+            <p>{{ item[3] }} kr</p>
+        </div>
+        {% endif %}
         {% endfor %}
     </div>
 </section>
@@ -36,6 +105,4 @@
     </div>
 </section>
 
-
 {% endblock %}
-    
